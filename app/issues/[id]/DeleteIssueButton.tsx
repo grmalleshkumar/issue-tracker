@@ -1,13 +1,17 @@
+"use client";
+
 import { AlertDialog, Button, Flex } from "@radix-ui/themes";
-import Link from "next/link";
+// import Link from "next/link";
 import React from "react";
 
 const DeleteIssueButton = ({ issueId }: { issueId: number }) => {
+  console.log("issueId ------>", issueId);
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger>
         <Button color="red">
-          <Link href={`/issues/${issueId}`}>Delete Issue</Link>
+          Delete Issue
+          {/* <Link href={`/issues/${issueId}`}>Delete Issue</Link> */}
         </Button>
       </AlertDialog.Trigger>
       <AlertDialog.Content>
