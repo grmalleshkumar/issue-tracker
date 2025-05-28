@@ -3,6 +3,7 @@ import { Table } from "@radix-ui/themes";
 import { Link } from "../components";
 import IssueStatusBadge from "../components/IssueStatusBadge";
 import IssueActions from "./IssueActions";
+import { Metadata } from "next";
 
 const IssuesPage = async () => {
   const issues = await prisma.issue.findMany();
@@ -47,5 +48,10 @@ const IssuesPage = async () => {
 };
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Issue Tracker - Issue List",
+  description: "View all project issues",
+};
 
 export default IssuesPage;
